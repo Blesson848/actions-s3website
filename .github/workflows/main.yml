@@ -42,7 +42,7 @@ jobs:
         
       - name: Terraform apply
         run: |
-          terraform apply -auto-approve \
+          terraform destroy -auto-approve \
             -var region="us-east-2" \
             -var access_key="${{ secrets.AWS_ACCESS_KEY_ID }}" \
             -var secret_key="${{ secrets.AWS_SECRET_ACCESS_KEY }}"  
